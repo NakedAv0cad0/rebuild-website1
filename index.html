@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,23 +12,278 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
     <!-- Tailwind style -->
-    <link href="../dist/output.css" rel="stylesheet" />
+    <link href="./dist/output.css" rel="stylesheet" />
   </head>
   <body>
-    <header>
-      <div class="">
-        <img class="w-16" src="./images/logo.png" alt="logo" />
-      </div>
-      <div>
-        <ul>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+    <header class="bg-white absolute top-0 left-0 right-0 z-10">
+      <div class="container flex items-start justify-between">
+        <div>
+          <img
+            class="w-16"
+            src="https://ik.imagekit.io/nakedavocado/pj1-logo.png"
+            alt="logo"
+          />
+        </div>
+        <div>
+          <div class="relative">
+            <i
+              id="menu-btn"
+              class="fa-solid fa-bars-staggered cursor-pointer text-2xl relative"
+            ></i>
+            <ul
+              id="menu"
+              class="hidden bg-gray-100 absolute right-5 top-10 w-64 rounded-sm py-2"
+            >
+              <li
+                class="py-3 relative hover:translate-x-3 transition-all px-6 cursor-pointer"
+              >
+                <a href="#services">Services</a>
+              </li>
+              <hr />
+              <li
+                class="py-3 relative hover:translate-x-3 transition-all px-6 cursor-pointer"
+              >
+                <a href="#portfolio">Portfolio</a>
+              </li>
+              <hr />
+              <li
+                class="py-3 relative hover:translate-x-3 transition-all px-6 cursor-pointer"
+              >
+                <a href="#about">About</a>
+              </li>
+              <hr />
+              <li
+                class="py-3 relative hover:translate-x-3 transition-all px-6 cursor-pointer"
+              >
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
-
-    <script src="" async defer></script>
+    <section
+      class="blur-bg relative h-screen -z-20 flex flex-col justify-center items-center"
+      id="hero"
+    >
+      <img
+        loading="lazy"
+        srcset="
+          https://ik.imagekit.io/nakedavocado/landing.jpg           1280w,
+          https://ik.imagekit.io/nakedavocado/tr:w-1024/landing.jpg 1024w,
+          https://ik.imagekit.io/nakedavocado/tr:w-800/landing.jpg   768w,
+          https://ik.imagekit.io/nakedavocado/tr:w-700/landing.jpg   640w
+        "
+        alt="hero"
+        class="w-full absolute -z-10 inset-0 object-cover h-full"
+      />
+      <h1 class="text-4xl sm:text-5xl text-primary tracking-wide font-black">
+        Hello there
+      </h1>
+      <p class="max-w-72 text-center leading-relaxed mt-4 text-lg sm:text-xl">
+        We are Leon - Super Creative & Minimal Agency Web Template
+      </p>
+    </section>
+    <section class="bg-gray-100 py-28">
+      <div class="container flex items-center justify-center flex-wrap gap-4">
+        <article
+          class="flex flex-col items-center justify-center gap-6 px-3 w-80"
+        >
+          <i class="fa-solid fa-magic fa-3x text-primary"></i>
+          <h2 class="text-lg font-black">Tell Us Your Idea</h2>
+          <p
+            class="text-lg leading-relaxed tracking-wide text-center text-gray-600"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut lab
+          </p>
+        </article>
+        <article
+          class="flex flex-col items-center justify-center gap-6 px-3 w-80"
+        >
+          <i class="fa-solid fa-gem fa-3x text-primary"></i>
+          <h2 class="text-lg font-black">We Will Do All The Work</h2>
+          <p
+            class="text-lg leading-relaxed tracking-wide text-center text-gray-600"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut lab
+          </p>
+        </article>
+        <article
+          class="flex flex-col items-center justify-center gap-6 px-3 w-80"
+        >
+          <i class="fa-solid fa-globe fa-3x text-primary"></i>
+          <h2 class="text-lg font-black">Your Product is Worldwide</h2>
+          <p
+            class="text-lg leading-relaxed tracking-wide text-center text-gray-600"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut lab
+          </p>
+        </article>
+      </div>
+    </section>
+    <section id="services" class="mb-24 mt-9">
+      <div class="title">
+        <h1>Services</h1>
+        <p>Don't be busy, be productive</p>
+      </div>
+      <div class="container mt-8 flex">
+        <div
+          class="holder grid justify-items-center gap-12 lg:gap-3 grid-cols-1 lg:grid-cols-2 mx-auto"
+        >
+          <div
+            class="service flex flex-col lg:flex-row justify-center items-center lg:items-start lg:justify-start gap-6 px-3 lg:min-w-[462px] max-w-[500px]"
+          >
+            <i class="fa-solid fa-palette fa-3x lg:fa-2x text-primary"></i>
+            <div class="flex flex-col gap-2">
+              <h2
+                class="text-xl lg:text-lg text-center lg:text-start font-black"
+              >
+                Graphic Design
+              </h2>
+              <p
+                class="lg:text-base text-lg leading-relaxed tracking-wide text-center lg:text-start text-gray-500 lg:max-w-[300px] font-light"
+              >
+                Graphic design is the process of visual communication and
+                problem-solving using one or more of typography, photography and
+                illustration
+              </p>
+            </div>
+          </div>
+          <div
+            class="service flex flex-col lg:flex-row justify-center items-center lg:items-start lg:justify-start gap-6 px-3 lg:min-w-[462px] max-w-[500px]"
+          >
+            <i
+              class="fa-solid fa-vector-square fa-3x lg:fa-2x text-primary"
+            ></i>
+            <div class="flex flex-col gap-2">
+              <h2
+                class="text-xl lg:text-lg text-center lg:text-start font-black"
+              >
+                Web Design
+              </h2>
+              <p
+                class="lg:text-base text-lg leading-relaxed tracking-wide text-center lg:text-start text-gray-500 lg:max-w-[300px] font-light"
+              >
+                Web design encompasses many different skills and disciplines in
+                the production and maintenance of websites.
+              </p>
+            </div>
+          </div>
+          <div
+            class="service flex flex-col lg:flex-row justify-center items-center lg:items-start lg:justify-start gap-6 px-3 lg:min-w-[462px] max-w-[500px]"
+          >
+            <i class="fa-solid fa-gem fa-3x lg:fa-2x text-primary"></i>
+            <div class="flex flex-col gap-2">
+              <h2
+                class="text-xl lg:text-lg text-center lg:text-start font-black"
+              >
+                UI & UX
+              </h2>
+              <p
+                class="lg:text-base text-lg leading-relaxed tracking-wide text-center lg:text-start text-gray-500 lg:max-w-[300px] font-light"
+              >
+                Process of enhancing user satisfaction with a product by
+                improving the usability, accessibility, and pleasure provided in
+                the interaction.
+              </p>
+            </div>
+          </div>
+          <div
+            class="service flex flex-col lg:flex-row justify-center items-center lg:items-start lg:justify-start gap-6 px-3 lg:min-w-[462px] max-w-[500px]"
+          >
+            <i class="fa-solid fa-pen-ruler fa-3x lg:fa-2x text-primary"></i>
+            <div class="flex flex-col gap-2">
+              <h2
+                class="text-xl lg:text-lg text-center lg:text-start font-black"
+              >
+                Web Development
+              </h2>
+              <p
+                class="lg:text-base text-lg leading-relaxed tracking-wide text-center lg:text-start text-gray-500 lg:max-w-[300px] font-light"
+              >
+                Web development is a broad term for the work involved in
+                developing a web site for the Internet or an intranet.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="holder display-none">
+          <div
+            class="relative before:content-[''] before:h-[447px] before:w-[100px] before:bg-secondary before:absolute before:-top-[50px] before:-right-[50px] before:-z-10"
+          >
+            <img
+              src="https://ik.imagekit.io/nakedavocado/tr:w-260/pj1-services.jpg"
+              alt="mountain"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-gray-100 py-9">
+      <div class="title">
+        <h1>Portfolio</h1>
+        <p>If you do it right, it will last forever</p>
+      </div>
+      <div class="grid justify-items-center grid-cols-3">
+        <div class="xl:w-[360px]">
+          <img
+            class=""
+            srcset="
+              https://ik.imagekit.io/nakedavocado/tr:w-360/pj1-portfolio-1.jpg  480w,
+              https://ik.imagekit.io/nakedavocado/pj1-portfolio-1.jpg           768w,
+              https://ik.imagekit.io/nakedavocado/tr:w-360/pj1-portfolio-1.jpg 1024w
+            "
+            alt="Portfolio picture"
+          />
+          <div>
+            <h2 class="font-bold text-xl">Project here</h2>
+            <p>
+              My creative ability is very difficult to measure because it can
+              manifest in so many surprising and.
+            </p>
+          </div>
+        </div>
+        <div class="xl:w-[360px]">
+          <img
+            class=""
+            srcset="
+              https://ik.imagekit.io/nakedavocado/tr:w-360/pj1-portfolio-2.jpg  480w,
+              https://ik.imagekit.io/nakedavocado/pj1-portfolio-2.jpg           768w,
+              https://ik.imagekit.io/nakedavocado/tr:w-360/pj1-portfolio-2.jpg 1024w
+            "
+            alt="Portfolio picture"
+          />
+          <div>
+            <h2 class="font-bold text-xl">Project here</h2>
+            <p>
+              My creative ability is very difficult to measure because it can
+              manifest in so many surprising and.
+            </p>
+          </div>
+        </div>
+        <div class="xl:w-[360px]">
+          <img
+            class=""
+            srcset="
+              https://ik.imagekit.io/nakedavocado/tr:w-360/pj1-portfolio-3.jpg  480w,
+              https://ik.imagekit.io/nakedavocado/pj1-portfolio-3.jpg           768w,
+              https://ik.imagekit.io/nakedavocado/tr:w-360/pj1-portfolio-3.jpg 1024w
+            "
+            alt="Portfolio picture"
+          />
+          <div>
+            <h2 class="font-bold text-xl">Project here</h2>
+            <p>
+              My creative ability is very difficult to measure because it can
+              manifest in so many surprising and.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./script.js" async defer></script>
   </body>
 </html>
