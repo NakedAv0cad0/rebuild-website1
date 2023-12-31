@@ -1,7 +1,6 @@
+// Toggle menu
 const menuBtn = document.getElementById("menu-btn");
 const menu = document.getElementById("menu");
-
-// Toggle menu
 document.addEventListener("click", (e) => {
   if (e.target.id === "menu-btn") {
     menu.classList.toggle("hidden");
@@ -17,7 +16,6 @@ imgHolders.forEach((holder) => {
   const load = () => {
     holder.classList.add("loaded");
   };
-  console.log(holder);
   if (img.complete) load();
   if (!img.complete) img.addEventListener("load", load);
 });

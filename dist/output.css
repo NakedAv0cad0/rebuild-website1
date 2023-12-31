@@ -1058,6 +1058,8 @@ html {
   }
 }
 
+/* Add a media query for .about-img */
+
 @media (min-width: 1024px) {
   .about-img {
     position: relative;
