@@ -10,12 +10,18 @@ document.addEventListener("click", (e) => {
   menu.classList.add("hidden");
 });
 
-const hero = document.getElementById("hero");
-const heroImg = hero.querySelector("img");
+// Load images
+const imgHolders = document.querySelectorAll(".blur-bg");
+imgHolders.forEach((holder) => {
+  const img = holder.querySelector("img");
+  const load = () => {
+    holder.classList.add("loaded");
+  };
+  console.log(holder);
+  if (img.complete) load();
+  if (!img.complete) img.addEventListener("load", load);
+});
 
-const load = () => {
-  hero.classList.add("loaded");
-};
-
-if (heroImg.complete) load();
-if (!heroImg.complete) heroImg.addEventListener("load", load);
+// Set year
+const year = document.getElementById("year");
+year.innerText = new Date().getFullYear();

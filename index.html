@@ -8,8 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Font awesome -->
     <link
+      async
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <!-- Tailwind style -->
     <link href="./dist/output.css" rel="stylesheet" />
@@ -34,28 +35,36 @@
               id="menu"
               class="hidden bg-gray-100 absolute right-5 top-10 w-64 rounded-sm py-2"
             >
-              <li
-                class="py-3 relative hover:translate-x-3 transition-all px-6 cursor-pointer"
-              >
-                <a href="#services">Services</a>
+              <li class="cursor-pointer">
+                <a
+                  class="py-3 relative hover:translate-x-3 transition-all px-6 block"
+                  href="#services"
+                  >Services</a
+                >
               </li>
               <hr />
-              <li
-                class="py-3 relative hover:translate-x-3 transition-all px-6 cursor-pointer"
-              >
-                <a href="#portfolio">Portfolio</a>
+              <li>
+                <a
+                  class="block py-3 relative hover:translate-x-3 transition-all px-6"
+                  href="#portfolio"
+                  >Portfolio</a
+                >
               </li>
               <hr />
-              <li
-                class="py-3 relative hover:translate-x-3 transition-all px-6 cursor-pointer"
-              >
-                <a href="#about">About</a>
+              <li>
+                <a
+                  class="block py-3 relative hover:translate-x-3 transition-all px-6"
+                  href="#about"
+                  >About</a
+                >
               </li>
               <hr />
-              <li
-                class="py-3 relative hover:translate-x-3 transition-all px-6 cursor-pointer"
-              >
-                <a href="#contact">Contact</a>
+              <li>
+                <a
+                  class="block py-3 relative hover:translate-x-3 transition-all px-6"
+                  href="#contact"
+                  >Contact</a
+                >
               </li>
             </ul>
           </div>
@@ -65,14 +74,17 @@
     <section
       class="blur-bg relative h-screen -z-20 flex flex-col justify-center items-center"
       id="hero"
+      style="
+        --bg: url('https://ik.imagekit.io/nakedavocado/tr:w-24/pj1-landing.jpg');
+      "
     >
       <img
         loading="lazy"
         srcset="
-          https://ik.imagekit.io/nakedavocado/landing.jpg           1280w,
-          https://ik.imagekit.io/nakedavocado/tr:w-1024/landing.jpg 1024w,
-          https://ik.imagekit.io/nakedavocado/tr:w-800/landing.jpg   768w,
-          https://ik.imagekit.io/nakedavocado/tr:w-700/landing.jpg   640w
+          https://ik.imagekit.io/nakedavocado/pj1-landing.jpg           1280w,
+          https://ik.imagekit.io/nakedavocado/tr:w-1200/pj1-landing.jpg 1024w,
+          https://ik.imagekit.io/nakedavocado/tr:w-800/pj1-landing.jpg   768w,
+          https://ik.imagekit.io/nakedavocado/tr:w-700/pj1-landing.jpg   640w
         "
         alt="hero"
         class="w-full absolute -z-10 inset-0 object-cover h-full"
@@ -80,7 +92,7 @@
       <h1 class="text-4xl sm:text-5xl text-primary tracking-wide font-black">
         Hello there
       </h1>
-      <p class="max-w-72 text-center leading-relaxed mt-4 text-lg sm:text-xl">
+      <p class="max-w-80 text-center leading-relaxed mt-4 text-lg sm:text-xl">
         We are Leon - Super Creative & Minimal Agency Web Template
       </p>
     </section>
@@ -89,7 +101,7 @@
         <article
           class="flex flex-col items-center justify-center gap-6 px-3 w-80"
         >
-          <i class="fa-solid fa-magic fa-3x text-primary"></i>
+          <i class="fa-solid fa-wand-magic-sparkles fa-3x text-primary"></i>
           <h2 class="text-lg font-black">Tell Us Your Idea</h2>
           <p
             class="text-lg leading-relaxed tracking-wide text-center text-gray-600"
@@ -222,61 +234,96 @@
         </div>
       </div>
     </section>
-    <section class="bg-gray-100 py-9">
+    <section id="portfolio" class="bg-gray-100 py-9">
       <div class="title">
         <h1>Portfolio</h1>
         <p>If you do it right, it will last forever</p>
       </div>
-      <div class="grid justify-items-center grid-cols-3">
-        <div class="xl:w-[360px]">
-          <img
-            class=""
-            srcset="
-              https://ik.imagekit.io/nakedavocado/tr:w-360/pj1-portfolio-1.jpg  480w,
-              https://ik.imagekit.io/nakedavocado/pj1-portfolio-1.jpg           768w,
-              https://ik.imagekit.io/nakedavocado/tr:w-360/pj1-portfolio-1.jpg 1024w
+      <div
+        class="container grid justify-items-center sm:grid-cols-2 gap-4 xl:grid-cols-3"
+      >
+        <div class="xl:w-[360px] bg-white">
+          <div
+            class="blur-bg"
+            style="
+              background-image: url('https://ik.imagekit.io/nakedavocado/tr:w-24/pj1-portfolio-1.jpg');
+
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-position: center;
+              background-color: green;
             "
-            alt="Portfolio picture"
-          />
-          <div>
-            <h2 class="font-bold text-xl">Project here</h2>
-            <p>
+          >
+            <img
+              src="https://ik.imagekit.io/nakedavocado/pj1-portfolio-1.jpg"
+              loading="lazy"
+              alt="Portfolio picture"
+            />
+          </div>
+
+          <div class="px-3.5 py-4">
+            <h2 class="font-bold text-lg mb-4">Project here</h2>
+            <p
+              class="text-gray-500 text-sm sm:text-base tracking-wide leading-relaxed"
+            >
               My creative ability is very difficult to measure because it can
               manifest in so many surprising and.
             </p>
           </div>
         </div>
-        <div class="xl:w-[360px]">
-          <img
-            class=""
-            srcset="
-              https://ik.imagekit.io/nakedavocado/tr:w-360/pj1-portfolio-2.jpg  480w,
-              https://ik.imagekit.io/nakedavocado/pj1-portfolio-2.jpg           768w,
-              https://ik.imagekit.io/nakedavocado/tr:w-360/pj1-portfolio-2.jpg 1024w
+        <div class="xl:w-[360px] bg-white">
+          <div
+            class="blur-bg"
+            style="
+              background-image: url('https://ik.imagekit.io/nakedavocado/tr:w-24/pj1-portfolio-2.jpg');
+
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-position: center;
+              background-color: green;
             "
-            alt="Portfolio picture"
-          />
-          <div>
-            <h2 class="font-bold text-xl">Project here</h2>
-            <p>
+          >
+            <img
+              src="https://ik.imagekit.io/nakedavocado/pj1-portfolio-2.jpg"
+              loading="lazy"
+              alt="Portfolio picture"
+            />
+          </div>
+
+          <div class="px-3.5 py-4">
+            <h2 class="font-bold text-lg mb-4">Project here</h2>
+            <p
+              class="text-gray-500 text-sm sm:text-base tracking-wide leading-relaxed"
+            >
               My creative ability is very difficult to measure because it can
               manifest in so many surprising and.
             </p>
           </div>
         </div>
-        <div class="xl:w-[360px]">
-          <img
-            class=""
-            srcset="
-              https://ik.imagekit.io/nakedavocado/tr:w-360/pj1-portfolio-3.jpg  480w,
-              https://ik.imagekit.io/nakedavocado/pj1-portfolio-3.jpg           768w,
-              https://ik.imagekit.io/nakedavocado/tr:w-360/pj1-portfolio-3.jpg 1024w
+        <div class="xl:w-[360px] bg-white">
+          <div
+            class="blur-bg"
+            style="
+              background-image: url('https://ik.imagekit.io/nakedavocado/tr:w-24/pj1-portfolio-3.jpg');
+
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-position: center;
+              background-color: green;
             "
-            alt="Portfolio picture"
-          />
-          <div>
-            <h2 class="font-bold text-xl">Project here</h2>
-            <p>
+          >
+            <img
+              src="https://ik.imagekit.io/nakedavocado/pj1-portfolio-3.jpg"
+              loading="lazy"
+              alt="Portfolio picture"
+            />
+          </div>
+
+          <div class="px-3.5 py-4">
+            <h2 class="font-bold text-lg mb-4">Project here</h2>
+            <p
+              class="text-gray-500 text-sm sm:text-base tracking-wide leading-relaxed"
+            >
               My creative ability is very difficult to measure because it can
               manifest in so many surprising and.
             </p>
@@ -284,6 +331,79 @@
         </div>
       </div>
     </section>
+    <section id="about" class="py-9">
+      <div class="title">
+        <h1>About</h1>
+        <p>Less is more work</p>
+      </div>
+      <div
+        class="container flex flex-col gap-4 justify-center items-center lg:flex-row lg:justify-around"
+      >
+        <div
+          class="about-img blur-bg"
+          style="
+            --bg: url('https://ik.imagekit.io/nakedavocado/tr:w-24/pj1-about.jpg');
+          "
+        >
+          <img
+            loading="lazy"
+            src="https://ik.imagekit.io/nakedavocado/tr:w-250/pj1-about.jpg"
+            alt="Picture"
+          />
+        </div>
+        <div
+          class="lg:max-w-[440px] xl:max-w-[600px] leading-loose text-center max-w-[500px]"
+        >
+          <p class="font-bold">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nemo
+            neque voluptate tempora velit cum non, fuga vitae architecto
+            delectus sed maxime rerum impedit aliquam obcaecati, aut excepturi
+            iusto laudantium!
+          </p>
+          <div
+            class="h-[2px] bg-primary w-80 mt-10 mb-7 tracking-wider mx-auto lg:mx-0"
+          ></div>
+          <p class="text-gray-500">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus,
+            sapiente. Velit iure exercitationem dolores nesciunt dolore. Eum
+            officiis dolorum hic voluptate quaerat minima, similique inventore
+            esse, alias, sed quo officia?
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="py-9">
+      <div class="title">
+        <h1>Contact</h1>
+        <p>We are born to create</p>
+      </div>
+      <div
+        class="container text-center text-2xl sm:text-3xl md:text-4xl font-black"
+      >
+        <p class="text-secondary tracking-tight">
+          Feel free to drop us a line at:
+        </p>
+        <a
+          class="text-primary tracking-tight my-4 block"
+          href="mailto:leonagency@mail.com"
+          >leonagency@mail.com</a
+        >
+        <p class="font-normal text-base">
+          Find Us On Social Media Network
+          <i class="fa-brands fa-youtube text-secondary"></i>
+          <i class="fa-brands fa-facebook text-secondary"></i>
+          <!-- Twitter x icon -->
+          <i class="fa-brands fa-x-twitter text-secondary"></i>
+        </p>
+      </div>
+    </section>
+    <footer class="py-5 bg-secondary">
+      <p class="text-white text-center">
+        &copy; <span id="year"></span>
+        <span class="font-bold text-primary">Graphberry</span> All Right
+        Reserved
+      </p>
+    </footer>
     <script src="./script.js" async defer></script>
   </body>
 </html>

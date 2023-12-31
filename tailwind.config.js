@@ -9,6 +9,9 @@ module.exports = {
         text: "#94a3b8",
       },
     },
+    fontFamily: {
+      sans: ["Work Sans", "sans-serif"],
+    },
   },
   plugins: [],
 };
